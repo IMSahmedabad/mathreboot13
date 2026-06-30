@@ -136,7 +136,7 @@ select.entry-input{cursor:pointer;appearance:none;background-image:url("data:ima
   <div class="entry-card">
     <div class="entry-logo">QA <span>Math Reboot 13</span></div>
     <div class="entry-title">Segments 39&ndash;42 &mdash; Trains, Boats, Escalators &amp; Clocks</div>
-    <div class="entry-sub">MCQ (+3/&minus;1) &amp; TITA (+3/0) &middot; 35 Questions<br>The 70-minute timer starts after you click <strong>Begin Test</strong>.</div>
+    <div class="entry-sub">MCQ (+3/&minus;1) &amp; TITA (+3/0) &middot; 35 Questions<br>The 90-minute timer starts after you click <strong>Begin Test</strong>.</div>
     <div class="entry-divider"></div>
     <div class="entry-field"><label class="entry-label">Student Name *</label><input class="entry-input" id="inp-name" type="text" placeholder="Your full name" autocomplete="off"/></div>
     <div class="entry-field"><label class="entry-label">Center *</label>
@@ -148,17 +148,17 @@ select.entry-input{cursor:pointer;appearance:none;background-image:url("data:ima
     <div class="entry-field"><label class="entry-label">Batch *</label><input class="entry-input" id="inp-batch" type="text" placeholder="e.g. CAT 26 &middot; 2601" autocomplete="off"/></div>
     <div class="entry-err" id="entry-err"></div>
     <button class="entry-btn" onclick="startTest()">Begin Test &#9654;</button>
-    <div class="entry-note">35 Questions &middot; 70 Minutes &middot; MCQ: +3/&minus;1 &middot; TITA: +3/0 &middot; Max 105</div>
+    <div class="entry-note">35 Questions &middot; 90 Minutes &middot; MCQ: +3/&minus;1 &middot; TITA: +3/0 &middot; Max 105</div>
   </div>
 </div>
 <div class="toast" id="toast"></div>
 
 <div class="header">
   <div class="logo">QA <span>Math Reboot 13</span></div>
-  <div class="hc"><div class="sec-badge">Trains, Boats, Escalators &amp; Clocks</div><div class="h-info">35 Qs &nbsp;&middot;&nbsp; 70 Min &nbsp;&middot;&nbsp; MCQ &minus;1 &middot; TITA no negative</div></div>
+  <div class="hc"><div class="sec-badge">Trains, Boats, Escalators &amp; Clocks</div><div class="h-info">35 Qs &nbsp;&middot;&nbsp; 90 Min &nbsp;&middot;&nbsp; MCQ &minus;1 &middot; TITA no negative</div></div>
   <div style="display:flex;align-items:center;gap:14px">
     <div class="h-student" id="h-student"></div>
-    <div class="timer-wrap"><div class="timer-label">Time Left</div><div class="timer" id="timer">70:00</div></div>
+    <div class="timer-wrap"><div class="timer-label">Time Left</div><div class="timer" id="timer">90:00</div></div>
   </div>
 </div>
 
@@ -227,7 +227,7 @@ select.entry-input{cursor:pointer;appearance:none;background-image:url("data:ima
   <div style="background:white;border-radius:16px;padding:40px 48px;text-align:center;max-width:360px;box-shadow:0 20px 60px rgba(0,0,0,.3)">
     <div style="font-size:36px;margin-bottom:12px">&#9201;</div>
     <div style="font-size:20px;font-weight:700;color:var(--red);margin-bottom:8px">Time&rsquo;s Up!</div>
-    <div style="font-size:13px;color:var(--subtext);margin-bottom:20px">70 minutes elapsed. Submitting now.</div>
+    <div style="font-size:13px;color:var(--subtext);margin-bottom:20px">90 minutes elapsed. Submitting now.</div>
     <button class="btn btn-submit" style="width:100%" onclick="doSubmit()">View Results</button>
   </div>
 </div>
@@ -419,7 +419,7 @@ const Q=[
  answer:'60',tol:0},
 ];
 
-const TOTAL=35,SECS=70*60;
+const TOTAL=35,SECS=90*60;
 let cur=1,timeLeft=SECS,timerInt=null,submitted=false;
 let student={name:'',center:'',batch:''};
 const state={};
